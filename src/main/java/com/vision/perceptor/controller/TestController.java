@@ -223,8 +223,8 @@ public class TestController {
 	
 	
 	@RequestMapping("/getTest")
-//	public @ResponseBody Result<TestModel> getTest(@RequestParam("path") String path) {
-	public @ResponseBody Result<TestModel> getTest() {
+//	public @ResponseBody Result<List<TestModel>> getTest(@RequestParam("path") String path) {
+	public @ResponseBody Result<List<TestModel>> getTest() {
 		
 //		logger.debug(path);
 		
@@ -234,7 +234,7 @@ public class TestController {
 //		dataBaseTest.connect();
 //		TestModel test = new TestModel();
 		
-		TestModel test = testService.printTestData();
+		List<TestModel> test = testService.printTestData();
 		
 		try {
 			logger.info(">>" + testService.getNow());
@@ -245,7 +245,7 @@ public class TestController {
 		
 //		logger.info( test.getTestName() );
 		
-		return new Result<TestModel>(test);
+		return new Result<List<TestModel>>(test);
 	}
 	
 	@RequestMapping(value="/ajaxImgHistView", method=RequestMethod.POST)

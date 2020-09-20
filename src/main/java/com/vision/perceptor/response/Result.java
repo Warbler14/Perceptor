@@ -43,7 +43,20 @@ public class Result <T>{
 	public void setData(T data) {
 		this.data = data;
 	}
-	
-	
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Result [status=");
+		builder.append(status);
+		builder.append(", message=");
+		builder.append(message);
+		builder.append(", code=");
+		builder.append(code);
+		builder.append(", data=");
+		builder.append(data);
+		builder.append("]");
+		return builder.toString();
+	}
+	
 }

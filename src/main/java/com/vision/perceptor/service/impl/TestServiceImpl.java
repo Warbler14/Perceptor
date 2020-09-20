@@ -1,5 +1,7 @@
 package com.vision.perceptor.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,12 +21,8 @@ public class TestServiceImpl implements TestService{
 	}
 	
 	@Override
-	public TestModel printTestData() {
-		TestModel test = testDao.getTest();
-		if(test == null) {
-			System.out.println( "null" );
-		}
-		return test;
+	public List<TestModel> printTestData() {
+		return testDao.getTest();
 	}
 
 

@@ -20,7 +20,7 @@ import com.vision.perceptor.service.ImageService;
 @Service
 public class ImageServiceImpl implements ImageService{
 	
-	static final Logger logger = LoggerFactory.getLogger(ImageServiceImpl.class);
+	private static final Logger logger = LoggerFactory.getLogger(ImageServiceImpl.class);
 
 	public static String systemSaveFileRoot = "C:\\test\\image";
 	

@@ -15,7 +15,6 @@
 			DATE_FORMAT(TEST_TIME, '%Y-%m-%d') AS testTime
 		FROM test_table
 		ORDER BY TEST_SEQ
-		LIMIT 1
 	</select>
 	
 </mapper>
